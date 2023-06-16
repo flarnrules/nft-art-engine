@@ -35,11 +35,13 @@ and then you will need to do this:
 
 `git push origin --force --all`
 
-and this:
+and these commands:
 
-`git for-each-ref --format="delete %(refname)" refs/original | git update-ref --stdin
-git reflog expire --expire=now --all
-git gc --prune=now`
+`git for-each-ref --format="delete %(refname)" refs/original | git update-ref --stdin`
+`git reflog expire --expire=now --all`
+`git gc --prune=now`
+
+Okay, after doing all of that, you should be good to go. Don't forget to put node_modules in your .gitignore next time!
 
 
 ## dependencies
