@@ -27,6 +27,21 @@ you can reset with the following command:
 
 `git reset HEAD~1`
 
+if that didn't work because you are so deep in the commit history, you will need to use this command:
+
+`git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch node_modules" HEAD`
+
+and then you will need to do this:
+
+`git push origin --force --all`
+
+and this:
+
+`git for-each-ref --format="delete %(refname)" refs/original | git update-ref --stdin
+git reflog expire --expire=now --all
+git gc --prune=now`
+
+
 ## dependencies
 
 You will need:
