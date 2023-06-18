@@ -85,4 +85,8 @@ copy the install command:
 or
 `yarn add @hashlips-lab/art-engine`
 
+lab.hashlips.io
+
+write some boilerplate for index.js
+
 
